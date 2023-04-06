@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "codetoolsgpt"
+version = "0.1.0"
+description = ""
+authors = ["Gabriel Pascualy <pascualy@umich.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+generate = "codetoolsgpt.generate:main"
+evaluate = "codetoolsgpt.evaluate:main"
