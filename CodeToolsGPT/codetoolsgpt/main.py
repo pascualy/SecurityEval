@@ -2,6 +2,7 @@ import argparse
 import json
 from pathlib import Path
 from typing import List, Dict
+from dotenv import load_dotenv
 
 from codetoolsgpt.evaluate import evaluate_methods
 from codetoolsgpt.generate import generate_methods
@@ -19,6 +20,7 @@ def output_generate_results(output_path: str, test_name: str, results: List[Dict
         output_file = prefix_dir / result['filename']
 
         with output_file.open('w') as file:
+            print(result)
             file.write(result['generated_code'])
             
 
@@ -63,13 +65,12 @@ def main():
                 input_data.append({"CWE": cwe.name, "filename": file.name, "code": fp.read()})
 
     if args.command == "generate":
-        
-        results = evaluate_methods[args.method](input_data)
+        results = generate_methods[args.method](input_data)
         if args.output:
             output_generate_results(output_path=args.output, test_name=args.method, results=results)
     
     elif args.command == 'evaluate':
-        results = generate_methods[args.method](input_data)
+        results = evaluate_methods[args.method](input_data)
         if args.output:
             filename = Path(str(args.directory.name).lower() + f'_{args.method.lower()}.json')
             print(args.output / filename)

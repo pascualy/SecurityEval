@@ -29,11 +29,11 @@ For both subcommands, the following arguments are available:
 
 To generate code examples using the `zero_shot` method:
 
-    python cli.py generate -d ./Testcases_Insecure_Code -m zero_shot -o ./
+    poetry run generate -d ./Testcases_Insecure_Code -m zero_shot -o ./
 
 To evaluate the security of the provided code using the `zero_shot` method:
 
-    python cli.py evaluate -d ./Testcases_Inscode -m method2 -o ./Result
+    poetry run evaluate -d ./Testcases_Inscode -m zero_shot -o ./Result
 
 
 ## Output Format
