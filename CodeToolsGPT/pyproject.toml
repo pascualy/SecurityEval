@@ -2,17 +2,15 @@
 name = "codetoolsgpt"
 version = "0.1.0"
 description = ""
-authors = ["Gabriel Pascualy <pascualy@umich.edu>"]
+authors = ["Lauren Heintz <lheintz@mit.edu>", "Michaela Murr <mmurr@mit.edu>", "Gabriel Pascualy <pascualy@mit.edu>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-generate = "codetoolsgpt.generate:main"
-evaluate = "codetoolsgpt.evaluate:main"
+codetoolsgpt = "codetoolsgpt.main:main"
