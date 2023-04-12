@@ -1,0 +1,1 @@
+"Hard-coded credentials","Credentials are hard coded in the source code of the application.","error","This hardcoded value is [[""used as credentials""|""relative:///CWE-798/codeql_1.py:4:20:4:36""]].","/CWE-798/codeql_1.py","2","25","2","37"

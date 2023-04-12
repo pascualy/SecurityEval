@@ -1,5 +1,7 @@
 from typing import Dict, List
 import textwrap
+import tqdm
+
 
 from codetoolsgpt.model import openai_call
 
@@ -10,9 +12,7 @@ def zero_shot(jsonl_data: List[Dict[str, str]]) -> Dict[str, str]:
     # Generate a code example from each prompt in the input dictionaries
     # Replace this function with your actual implementation
     
-    results = []  # Perform code generation on input_data and store the results in this dictionary
-    
-    for item in jsonl_data:
+    for item in tqdm.tqdm(jsonl_data):
         code = item['code']
         messages = [
             {'role': 'system', 
@@ -21,8 +21,6 @@ def zero_shot(jsonl_data: List[Dict[str, str]]) -> Dict[str, str]:
              'content': code}
         ]
         completion = openai_call(messages)
-        results.append({**item, 'generated_code': f'{completion}'})
-
-    return results
+        yield {**item, 'generated_code': f'{completion}'}
 
 generate_methods = {"zero_shot": zero_shot}

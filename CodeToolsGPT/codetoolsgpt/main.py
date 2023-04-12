@@ -1,8 +1,8 @@
 import argparse
 import json
+
 from pathlib import Path
 from typing import List, Dict
-from dotenv import load_dotenv
 
 from codetoolsgpt.evaluate import evaluate_methods
 from codetoolsgpt.generate import generate_methods
@@ -20,7 +20,6 @@ def output_generate_results(output_path: str, test_name: str, results: List[Dict
         output_file = prefix_dir / result['filename']
 
         with output_file.open('w') as file:
-            print(result)
             file.write(result['generated_code'])
             
 
@@ -57,6 +56,15 @@ def main():
         )
 
     args = parser.parse_args()
+
+    # Handle external evaluation methods
+    if args.command == "evaluate":
+        if args.method == 'bandit':
+            evaluate_methods[args.method](args.output, args.directory)
+        elif args.method == 'codeql':
+            evaluate_methods[args.method](args.output, args.directory)
+        
+        return
 
     input_data = []
     for cwe in args.directory.iterdir():
