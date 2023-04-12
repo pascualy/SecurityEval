@@ -29,11 +29,11 @@ For both subcommands, the following arguments are available:
 
 To generate code examples using the `zero_shot` method:
 
-    poetry run generate -d ./Testcases_Insecure_Code -m zero_shot -o ./
+    poetry run codetoolsgpt generate -d ../Testcases_Insecure_Code -m zero_shot -o ./
 
 To evaluate the security of the provided code using the `zero_shot` method:
 
-    poetry run evaluate -d ./Testcases_Inscode -m zero_shot -o ./Result
+    poetry run codetoolsgpt evaluate -d ../Testcases_zero_shot -m zero_shot -o ./Result
 
 
 ## Output Format
