@@ -63,8 +63,6 @@ def main():
             evaluate_methods[args.method](args.output, args.directory)
         elif args.method == 'codeql':
             evaluate_methods[args.method](args.output, args.directory)
-        
-        return
 
     input_data = []
     for cwe in args.directory.iterdir():
@@ -78,12 +76,14 @@ def main():
             output_generate_results(output_path=args.output, test_name=args.method, results=results)
     
     elif args.command == 'evaluate':
-        results = evaluate_methods[args.method](input_data)
+        results_generator = evaluate_methods[args.method](input_data)
         if args.output:
             filename = Path(str(args.directory.name).lower() + f'_{args.method.lower()}.json')
-            print(args.output / filename)
-            with open(args.output / filename, 'w') as fp:
-                fp.write(json.dumps(results))
+            results = []
+            for result in results_generator:
+                results.append(result)
+                with open(args.output / filename, 'w') as fp:
+                    fp.write(json.dumps(results))
 
     if not args.output:
         print(json.dumps(results, indent=2))

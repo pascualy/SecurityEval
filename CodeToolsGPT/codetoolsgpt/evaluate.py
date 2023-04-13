@@ -1,21 +1,28 @@
 import subprocess
 import pathlib
 import os
+import tqdm
+import re
 
 from typing import Dict, List
 
 from codetoolsgpt.utils import get_project_root
-
+from codetoolsgpt.model import openai_call
+from codetoolsgpt.cwe_titles import cwe_titles
 
 def zero_shot(jsonl_data: List[Dict[str, str]]) -> Dict[str, str]:
     # Evaluate the security of the "Insecure_code" in each dictionary
-    # Replace this function with your actual implementation
-    
-    results = [] # Perform security evaluation on input_data and store the results in this dictionary
-    for item in jsonl_data:
-        results.append({**item, 'results': 'This is the evaluation.'})
-
-    return results
+    cwe_title_text = "\n\t".join([f"{k}: {v}" for k,v in cwe_titles.items()])
+    for item in tqdm.tqdm(jsonl_data):
+        code = item['code']
+        messages = [
+            {'role': 'system', 
+             'content': f'You are a secure code evaluation assistant. You will be given a Python code file. Provide which CWEs the code file has. Only output CWE numbers. Here are the CWEs you can choose from:\n{cwe_title_text}'},
+            {'role': 'user',
+             'content': code}
+        ]
+        completion = openai_call(messages)
+        yield {**item, 'output': f'{completion}', 'detected_cwes': re.compile(r'CWE-[0-9]+').findall(completion)}
 
 
 def run_bandit_eval(output_path: str, input_path: str):
