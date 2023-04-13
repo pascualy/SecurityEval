@@ -65,8 +65,13 @@ def main():
             default=None,
             help="File path to save the output. If not provided, output will be printed to stdout.",
         )
-
+        subparser.add_argument('-v', '--verbose', action='store_true', help='Increase output verbosity')
+        subparser.add_argument('-c', "--cwe-list", type=str, default="", help="Comma-separated list of CWE numbers to generate or evaluate (e.g., 102,329)")
+    
     args = parser.parse_args()
+
+    # Set logging level based on verbosity flag
+    log.setLevel(logging.DEBUG if args.verbose else logging.INFO)
 
     # Handle external evaluation methods
     if args.command == "evaluate":
@@ -75,8 +80,13 @@ def main():
         elif args.method == 'codeql':
             evaluate_methods[args.method](args.output, args.directory)
 
+    cwe_list = [f"CWE-{num.strip()}" for num in args.cwe_list.split(",") if num.strip()]
+
     input_data = []
     for cwe in args.directory.iterdir():
+        if len(cwe_list) and cwe.name not in cwe_list:
+            continue
+
         for file in cwe.iterdir():
             with open(file) as fp:
                 input_data.append({"CWE": cwe.name, "filename": file.name, "code": fp.read()})

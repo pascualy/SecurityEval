@@ -24,6 +24,9 @@ For both subcommands, the following arguments are available:
 
 `-o` or `--output`: File path to save the output. If not provided, output will be printed to stdout.
 
+`-c` or `--cwe-list`: Comma-separated list of CWE numbers to generate or evaluate (e.g., 102,329). This argument is used to filter the input data to only include the specified CWE numbers.
+
+`-v` or `--verbose`: Incrase verbosity of loggin and output dialogues with chat models
 
 ## Example Usage
 
@@ -41,6 +44,4 @@ To evaluate the security of the provided code using the `zero_shot` method:
 For the `generate` subcommand, the results will be saved in the specified output directory, with a folder structure based on the CWE categories and filenames derived from the input data.
 
 For the `evaluate` subcommand, the results will be saved as a JSON file in the specified output directory. The filename will be based on the name of the test directory and the chosen evaluation method.
-
-
 
