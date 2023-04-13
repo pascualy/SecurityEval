@@ -1,11 +1,22 @@
 import argparse
 import json
+import logging
 
 from pathlib import Path
 from typing import List, Dict
 
 from codetoolsgpt.evaluate import evaluate_methods
 from codetoolsgpt.generate import generate_methods
+
+
+# Set up logging configuration
+logging.basicConfig(level=logging.INFO,
+                    format='%(message)s',
+                    # format='%(asctime)s - %(levelname)s - %(message)s',
+                    handlers=[logging.StreamHandler(),
+                              logging.FileHandler('crawler.log', mode='a')])
+
+log = logging.getLogger(__name__)
 
 
 def output_generate_results(output_path: str, test_name: str, results: List[Dict[str, str]]):

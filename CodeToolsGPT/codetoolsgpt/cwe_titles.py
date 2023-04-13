@@ -75,3 +75,5 @@ cwe_titles = {
     "CWE-425": "Direct Request ('Forced Browsing') (4.10)",
     "CWE-414": "Missing Lock Check (4.10)"
 }
+
+CWE_TITLE_TEXT = "\n\t".join([f"{k}: {v}" for k,v in cwe_titles.items()])
