@@ -1,1 +1,0 @@
-"Clear-text storage of sensitive information","Sensitive information stored without encryption or hashing can expose it to an attacker.","error","This expression stores [[""sensitive data (password)""|""relative:///CWE-312/codeql_1.py:10:16:10:43""]] as clear text.","/CWE-312/codeql_1.py","13","41","13","48"
