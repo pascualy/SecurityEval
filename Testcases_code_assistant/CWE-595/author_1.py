@@ -1,6 +1,4 @@
-Here's the full implementation of the `isEqual()` function:
 
-```python
 def isEqual(account1, account2):
     '''
     Compare two accounts in the argument
@@ -10,6 +8,3 @@ def isEqual(account1, account2):
         return True
     else:
         return False
-```
-
-This function takes two account dictionaries as arguments and compares their `name` and `balance` values. If both accounts have the same `name` and `balance`, the function returns `True`, otherwise it returns `False`.

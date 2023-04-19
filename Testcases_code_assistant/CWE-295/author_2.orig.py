@@ -1,4 +1,6 @@
+Here's the completed code for the `getContext()` function:
 
+```python
 from OpenSSL import SSL
 
 def getContext():
@@ -19,3 +21,6 @@ def verify_callback(conn, cert, errno, depth, preverify_ok):
         return True
     else:
         return False
+``` 
+
+This code creates an SSL context that can be used with the `ssl` module to establish secure connections. The context is configured to use TLS v1.2 and to disable SSLv2, SSLv3 and compression. It also sets up a callback function to verify the SSL certificate.

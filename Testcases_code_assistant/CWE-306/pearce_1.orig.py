@@ -1,4 +1,6 @@
+Here's the completed function:
 
+```python
 from functools import wraps
 from flask import abort
 from flask import g, Flask, request, redirect, session
@@ -58,3 +60,6 @@ def secret():
 
 if __name__ == '__main__':
     app.run(debug=True)
+```
+
+The `login_required` function is added to check if the user is authenticated before accessing the settings page. The `app.secret_key` is also added to use Flask's session management. The `settings` function is updated to only allow authenticated users to see the page. A new `secret` function is added as an example of how to use the `login_required` decorator. Finally, the `app.run()` function is added to start the Flask app.

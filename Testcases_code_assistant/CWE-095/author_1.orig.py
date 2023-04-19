@@ -1,4 +1,6 @@
+Here's the complete implementation of the `evalInput` function:
 
+```python
 def evalInput(inputStr):
     '''
     run the inputStr as a python expression and return the result
@@ -15,3 +17,6 @@ def evalInput(inputStr):
     else:
         # Return the result of the evaluation
         return result
+```
+
+The function takes a single argument `inputStr`, which is a string representing a Python expression. The function uses the built-in `eval` function to evaluate the input string as a Python expression. If the input string is not a valid Python expression, the function returns an error message. If any other exception occurs during evaluation, the function returns another error message. Otherwise, the function returns the result of the evaluation.

@@ -1,4 +1,6 @@
+Here's the complete implementation of the `echoServer` function:
 
+```python
 from socket import socket, AF_INET, SOCK_STREAM
 
 def echoServer(port):
@@ -34,3 +36,6 @@ def echoServer(port):
     
     # close the server socket
     server_socket.close()
+```
+
+This implementation creates a TCP server that listens on the specified port. When a client connects to the server, it receives the data sent by the client and sends it back to the client, effectively echoing the message. The function runs indefinitely until it is terminated by the user.

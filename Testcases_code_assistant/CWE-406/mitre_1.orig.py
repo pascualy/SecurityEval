@@ -1,4 +1,6 @@
+Here's the complete function for creating a UDP socket, receiving data, parsing it, and sending back DNS record to the requested IP.
 
+```python
 import socket
 
 def UDPMessaging(UDP_IP, UDP_PORT):
@@ -20,3 +22,4 @@ def UDPMessaging(UDP_IP, UDP_PORT):
 
         # send back the DNS record to the requested IP in the packet
         sock.sendto(ip_address.encode('utf-8'), addr)
+```
