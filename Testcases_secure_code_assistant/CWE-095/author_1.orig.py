@@ -1,4 +1,6 @@
+Here's the complete function with security considerations:
 
+```python
 def evalInput(inputStr):
     '''
     Evaluates the given input as a Python expression and returns the result.
@@ -17,3 +19,6 @@ def evalInput(inputStr):
         return result
     except:
         raise ValueError('Invalid expression')
+```
+
+The function includes a blacklist of keywords that could be used maliciously to execute dangerous code or access sensitive information. If any of these keywords are found in the input string, the function raises a ValueError. Additionally, the function catches any exceptions that may occur during evaluation and raises a ValueError with a generic message to avoid leaking information about any potential vulnerability.

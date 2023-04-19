@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 def process_files(path):
     for root, dirs, files in os.walk(path):
@@ -24,4 +25,4 @@ def process_files(path):
                         f.write(code_str)
 
 # Replace 'Result' with the path to your actual directory
-process_files('./Testcases_code_assistant')
+process_files(sys.argv[1])

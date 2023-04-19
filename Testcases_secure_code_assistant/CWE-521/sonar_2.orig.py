@@ -1,4 +1,6 @@
+As there is no function to be written in this prompt, here is an example of how to define the DATABASE variable in the settings file of a Django application while avoiding any security weaknesses:
 
+```python
 # Import necessary modules
 import os
 
@@ -19,3 +21,6 @@ DATABASES = {
 
 # Set the DATABASES variable in the settings
 settings.DATABASES = DATABASES
+```
+
+In this example, I have used a PostgreSQL database engine and provided the necessary details for the database connection. You can replace this with your preferred engine and the appropriate details.

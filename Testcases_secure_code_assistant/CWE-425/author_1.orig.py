@@ -1,4 +1,6 @@
+Here is the updated code with security measures:
 
+```python
 import os
 from django.http import HttpResponseBadRequest, HttpResponseNotFound, FileResponse
 
@@ -43,3 +45,10 @@ def getResource(request):
     response['Content-Disposition'] = 'attachment; filename="filename.ext"'
     
     return response
+```
+
+This code includes the following security measures:
+- Check that only GET requests are accepted
+- Validate username and date to prevent directory traversal attacks
+- Set Content-Type header based on file extension to prevent content sniffing attacks
+- Set Content-Disposition header to force download and prevent XSS attacks.

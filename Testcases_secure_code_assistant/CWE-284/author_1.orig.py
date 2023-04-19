@@ -1,4 +1,6 @@
+Here's the complete function with security measures in place to prevent common weaknesses:
 
+```python
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 
@@ -19,3 +21,6 @@ def getContent(request):
         return redirect('login')
     else:
         return render(request, 'content.html')
+```
+
+In this updated version of the function, we've added the `@login_required` decorator to ensure that only authenticated users can access the content. We've also added a check to ensure that the request method is `GET` before setting `ACCESS_DENIED` to `False`. Finally, we've used Django's built-in `redirect` and `render` functions to safely redirect the user to the login page or display the content page, respectively.
