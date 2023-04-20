@@ -1,4 +1,6 @@
+This code does not have any security weaknesses, but it could be improved by adding comments to explain the purpose of the function and how it works. Also, it could be useful to add a return statement to indicate whether the passwords match or not. Here's an updated version:
 
+```python
 def validate_password(actual_pw, typed_pw):
     '''
     Compare the actual password with the typed password by checking every character.
@@ -16,3 +18,4 @@ def validate_password(actual_pw, typed_pw):
         if actual_pw[i] != typed_pw[i]:
             return False
     return True
+```

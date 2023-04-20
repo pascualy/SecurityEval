@@ -1,4 +1,6 @@
+The given code does not have any functionality. Here's an example implementation of a function that checks if a given number is a valid phone number using regular expressions:
 
+```python
 import re
 
 def checkNumber(number):
@@ -19,3 +21,5 @@ def checkNumber(number):
         return True
     else:
         return False
+```
+The regular expression pattern can be modified to check for other phone number formats as well.

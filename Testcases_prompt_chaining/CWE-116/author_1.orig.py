@@ -1,4 +1,6 @@
+Here's an updated version of the code that includes error handling and properly escapes user input to prevent XSS attacks:
 
+```python
 import html
 
 def send_reply(request):
@@ -32,3 +34,6 @@ def send_reply(request):
     except:
         # Return error message if there's an exception
         return "Error: Could not send response", {'Content-Type': 'text/plain'}, 500
+```
+
+This code now properly escapes user input using the `html.escape()` function to prevent XSS attacks. It also includes error handling and returns an error message if there's an exception.
