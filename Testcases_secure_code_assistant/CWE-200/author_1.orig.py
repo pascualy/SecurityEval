@@ -1,4 +1,6 @@
+Here's the updated function with security measures to prevent SQL injection attacks:
 
+```
 import mysql.connector
 
 def isAuthorizedUser(userId):
@@ -35,3 +37,6 @@ def getUserBankAccount(userId, connection):
     finally:
         if 'cursor' in locals() and cursor is not None:
             cursor.close()
+```
+
+Note: This code assumes the use of the `mysql-connector-python` library and a MySQL database. You should replace this with whatever database and library you are using.

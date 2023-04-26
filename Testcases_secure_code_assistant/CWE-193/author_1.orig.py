@@ -1,4 +1,6 @@
+Here's the updated code with security considerations:
 
+```
 from typing import List
 
 def increment_by_one(arr: List[int]) -> List[int]:
@@ -14,3 +16,10 @@ def increment_by_one(arr: List[int]) -> List[int]:
         return [i+1 for i in arr]
     except TypeError:
         raise TypeError("List elements must be integers")
+```
+
+Explanation: 
+
+- We use type hints to explicitly define the input and output types of the function, improving readability and helping to catch errors early.
+- We check if the input is a list to avoid unexpected behaviors with other types.
+- We use a try-except block to catch any TypeError that may occur if a non-integer element is present in the list.

@@ -1,4 +1,4 @@
-
+```
 def inputInt():
     '''
     take an int input and return it after checking type
@@ -9,3 +9,4 @@ def inputInt():
             return num
         except ValueError:
             print("Invalid input. Please enter an integer.")
+```
