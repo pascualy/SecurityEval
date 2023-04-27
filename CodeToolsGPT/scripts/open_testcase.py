@@ -4,13 +4,14 @@
 
 import os
 import subprocess
-import sys 
+import sys
+from pathlib import Path
 
 def open_files_in_vscode(cwe, name):
-    file_path_1 = f"../Testcases_code_assistant/{cwe}/{name}"
-    file_path_2 = f"../Testcases_secure_code_assistant/{cwe}/{name}"
-    file_path_3 = f"../Testcases_prompt_chaining/{cwe}/{name}"
-    file_path_4 = f"../Testcases_Insecure_Code/{cwe}/{name}"
+    file_path_1 = Path(f"../Testcases_code_assistant/{cwe}/{name}")    
+    file_path_2 = Path(f"../Testcases_secure_code_assistant/{cwe}/{name}")
+    file_path_3 = Path(f"../Testcases_prompt_chaining/{cwe}/{name}")
+    file_path_4 = Path(f"../Testcases_Insecure_Code/{cwe}/{name}")
 
     if os.path.exists(file_path_1) and os.path.exists(file_path_2):
         subprocess.run(["code", file_path_1, file_path_2, file_path_3, file_path_4])
