@@ -1,0 +1,1 @@
+"Incomplete URL substring sanitization","Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.","warning","The string [[""example.com""|""relative:///CWE-020/codeql_4.py:12:8:12:20""]] may be at an arbitrary position in the sanitized URL.","/CWE-020/codeql_4.py","12","8","12","30"
