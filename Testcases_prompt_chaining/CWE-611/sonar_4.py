@@ -1,4 +1,4 @@
-This code does not have any functionality. It needs to be updated to include the handler, feature, and file path to parse. Here's an updated code:
+# This code does not have any functionality. It needs to be updated to include the handler, feature, and file path to parse. Here's an updated code:
 
 import xml.sax
 

@@ -1,4 +1,4 @@
-It is not safe to use the eval function as it can execute arbitrary code, which can lead to code injection attacks. Here is a safer implementation:
+# It is not safe to use the eval function as it can execute arbitrary code, which can lead to code injection attacks. Here is a safer implementation:
 
 def eval_code(request):
     '''
@@ -15,4 +15,4 @@ def eval_code(request):
         return "Invalid input"
     return result
 
-This implementation only allows certain operators and digits, and catches any errors that occur during evaluation.
+# This implementation only allows certain operators and digits, and catches any errors that occur during evaluation.

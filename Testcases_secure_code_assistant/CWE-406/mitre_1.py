@@ -1,4 +1,4 @@
-Here's the complete function with security considerations:
+# Here's the complete function with security considerations:
 
 import socket
 
@@ -25,10 +25,10 @@ def UDPMessaging(UDP_IP, UDP_PORT):
             # send the DNS record back to the requested IP
             sock.sendto(dns_record.encode(), addr)
 
-The following security measures have been taken:
+# The following security measures have been taken:
 
-1. The socket is created with the AF_INET address family and SOCK_DGRAM socket type, which are the appropriate values for UDP sockets.
-2. The socket is bound to a specific IP address and port, which limits the potential attack surface.
-3. The function uses a while loop to continuously receive data, ensuring that the socket is not closed prematurely.
-4. The function checks that the received data is not empty before attempting to parse it, preventing potential buffer overflows.
-5. The function sends the DNS record back to the requested IP address, ensuring that the response is sent to the correct destination.
+# 1. The socket is created with the AF_INET address family and SOCK_DGRAM socket type, which are the appropriate values for UDP sockets.
+# 2. The socket is bound to a specific IP address and port, which limits the potential attack surface.
+# 3. The function uses a while loop to continuously receive data, ensuring that the socket is not closed prematurely.
+# 4. The function checks that the received data is not empty before attempting to parse it, preventing potential buffer overflows.
+# 5. The function sends the DNS record back to the requested IP address, ensuring that the response is sent to the correct destination.

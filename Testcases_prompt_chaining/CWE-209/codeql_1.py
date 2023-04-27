@@ -20,9 +20,3 @@ def server_bad():
 
 if __name__ == '__main__':
     app.run() 
-
-In the above code snippet, I have:
-- Added `jsonify` module from Flask to return a JSON response
-- Changed the exception message to not contain sensitive information
-- Changed the except block to return a response containing a non-sensitive error message and HTTP status code 500
-- Wrapped the code in a `if __name__ == '__main__':` block for safe execution

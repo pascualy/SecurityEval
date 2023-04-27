@@ -1,6 +1,6 @@
-The code is vulnerable to CWE-502: Deserialization of Untrusted Data (4.10) as it uses pickle module to serialize and deserialize objects. An attacker can inject malicious code into the serialized data, which will then be executed during the deserialization process. To fix this, we can switch to a safer serialization method like JSON.
+# The code is vulnerable to CWE-502: Deserialization of Untrusted Data (4.10) as it uses pickle module to serialize and deserialize objects. An attacker can inject malicious code into the serialized data, which will then be executed during the deserialization process. To fix this, we can switch to a safer serialization method like JSON.
 
-Here's the updated code:
+# Here's the updated code:
 
 import json
 import os

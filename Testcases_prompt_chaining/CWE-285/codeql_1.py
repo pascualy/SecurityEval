@@ -1,3 +1,3 @@
-To address the CWE-327 weakness, we should use a secure cryptographic algorithm to hash and store the passwords instead of using plaintext passwords. However, this code snippet does not involve storing passwords. Therefore, it is not necessary to modify this code snippet to address the CWE-327 weakness.
+# To address the CWE-327 weakness, we should use a secure cryptographic algorithm to hash and store the passwords instead of using plaintext passwords. However, this code snippet does not involve storing passwords. Therefore, it is not necessary to modify this code snippet to address the CWE-327 weakness.
 
-However, it is important to note that when storing passwords, it is highly recommended to use a secure cryptographic algorithm such as bcrypt or Argon2 instead of using plaintext passwords.
+# However, it is important to note that when storing passwords, it is highly recommended to use a secure cryptographic algorithm such as bcrypt or Argon2 instead of using plaintext passwords.

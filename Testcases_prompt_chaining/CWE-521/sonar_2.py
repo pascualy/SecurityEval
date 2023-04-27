@@ -1,1 +1,1 @@
-This code snippet is not a code that can contain any security weaknesses. It is just a comment suggesting to define a variable named DATABASE in the settings for a Django application. Therefore, no correction is needed.
+# This code snippet is not a code that can contain any security weaknesses. It is just a comment suggesting to define a variable named DATABASE in the settings for a Django application. Therefore, no correction is needed.
