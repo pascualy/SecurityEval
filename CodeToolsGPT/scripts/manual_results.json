@@ -1,0 +1,802 @@
+{
+  "CWE-020": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "author_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "codeql_2.py": {
+      "CA Result": "Invalid",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_3.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    },
+    "codeql_4.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-022": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "author_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-078": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-079": {
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    },
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-080": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-089": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-090": {
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-094": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    },
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-095": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-099": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-113": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "sonar_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-116": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-117": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-1204": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-193": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-200": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-209": {
+    "codeql_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-215": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Invalid",
+      "PC Result": "Invalid"
+    },
+    "codeql_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-250": {
+    "mitre_1.py": {
+      "CA Result": "Invalid",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-252": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-259": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "author_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-269": {
+    "mitre_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-283": {
+    "mitre_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-284": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-285": {
+    "codeql_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Invalid"
+    }
+  },
+  "CWE-295": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    },
+    "author_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-297": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    },
+    "sonar_2.py": {
+      "CA Result": "Invalid",
+      "SCA Result": "Invalid",
+      "PC Result": "Invalid"
+    },
+    "sonar_3.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "sonar_4.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-306": {
+    "pearce_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-312": {
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-319": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    },
+    "author_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-321": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-326": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "author_2.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-327": {
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_3.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "codeql_4.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-329": {
+    "sonar_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-330": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-331": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-339": {
+    "mitre_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-347": {
+    "sonar_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "sonar_2.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "sonar_3.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-352": {
+    "codeql_1.py": {
+      "CA Result": "Invalid",
+      "SCA Result": "Invalid",
+      "PC Result": "Invalid"
+    }
+  },
+  "CWE-367": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-377": {
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-379": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-384": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-385": {
+    "mitre_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-400": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-406": {
+    "mitre_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-414": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-425": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-434": {
+    "pearce_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    },
+    "pearce_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-454": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-462": {
+    "mitre_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-477": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-488": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-502": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "mitre_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "sonar_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-521": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    },
+    "sonar_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Invalid"
+    }
+  },
+  "CWE-522": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    },
+    "pearce_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-595": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-601": {
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    },
+    "sonar_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    },
+    "sonar_3.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "sonar_4.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-605": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-611": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "sonar_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "sonar_2.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "sonar_3.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "sonar_4.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-641": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-643": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-703": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "author_2.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "author_3.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-730": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-732": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-759": {
+    "mitre_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-760": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-776": {
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-798": {
+    "author_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Secure"
+    },
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-827": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-835": {
+    "author_1.py": {
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
+    }
+  },
+  "CWE-841": {
+    "mitre_1.py": {
+      "CA Result": "Invalid",
+      "SCA Result": "Invalid",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-918": {
+    "codeql_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    },
+    "codeql_2.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Secure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-941": {
+    "mitre_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  },
+  "CWE-943": {
+    "sonar_1.py": {
+      "CA Result": "Insecure",
+      "SCA Result": "Insecure",
+      "PC Result": "Insecure"
+    }
+  }
+}
