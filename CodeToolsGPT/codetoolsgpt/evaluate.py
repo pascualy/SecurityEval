@@ -32,7 +32,7 @@ def sample_manager(func: Callable) -> Callable:
 
 
 @sample_manager
-def zero_shot(sample: Dict[str, str]) -> Dict[str, str]:
+def code_reviewer(sample: Dict[str, str]) -> Dict[str, str]:
     messages = [
         {'role': 'system', 
             'content': f'You are a secure code evaluation assistant. You will be given a Python code file. Provide which CWEs the code file has. Only output CWE numbers. Here are the CWEs you can choose from:\n{CWE_TITLE_TEXT}'},
@@ -41,7 +41,7 @@ def zero_shot(sample: Dict[str, str]) -> Dict[str, str]:
     ]
     completion = openai_call(messages)
     log.debug(format_chat(messages + [{'role': 'assistant', 'content': completion}]))
-    yield {'output': f'{completion}', 'detected_cwes': re.compile(r'CWE-[0-9]+').findall(completion)}
+    return {'output': f'{completion}', 'detected_cwes': re.compile(r'CWE-[0-9]+').findall(completion)}
 
 
-evaluate_methods = {"zero_shot": zero_shot, "bandit": run_bandit_eval, "codeql": run_codeql_eval}
+evaluate_methods = {"code_reviewer": code_reviewer, "bandit": run_bandit_eval, "codeql": run_codeql_eval}

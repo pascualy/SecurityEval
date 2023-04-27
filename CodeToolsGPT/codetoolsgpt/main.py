@@ -9,6 +9,7 @@ from typing import List, Dict
 
 from codetoolsgpt.evaluate import evaluate_methods
 from codetoolsgpt.generate import generate_methods
+from codetoolsgpt.utils import get_project_root
 
 
 # Set up logging configuration
@@ -39,7 +40,12 @@ def add_result(results, testgroup, testname, method, result):
     results.setdefault(testgroup, {})
     results[testgroup].setdefault(testname, {})
     results[testgroup][testname].setdefault(method, set())
-    results[testgroup][testname][method].add(int(result))
+    try:
+        cwe_num = int(result)
+    except ValueError:
+        cwe_num = int(result.split('-')[1])
+
+    results[testgroup][testname][method].add(cwe_num)
 
 
 def load_test(path: Path):
@@ -70,7 +76,7 @@ def summarize_results(output_path: Path, generate_method: str, input_path: Path)
         custom_result = input_path / f'testcases_{generate_method}_{evaluate_method}.json'
         try:
             with custom_result.open() as fp:
-                for result in json.loads(fp.read())['results']:
+                for result in json.loads(fp.read()):
                     for detected_cwe in result['detected_cwes']:
                         add_result(results, result['CWE'], result['filename'], evaluate_method, detected_cwe)
         except FileNotFoundError as e:
@@ -91,12 +97,22 @@ def summarize_results(output_path: Path, generate_method: str, input_path: Path)
             add_result(results, folder, file, 'bandit', result['issue_cwe']['id'])
 
     methods = [a for a in list(sorted(evaluate_methods.keys())) if a not in ['codeql', 'bandit']] + ['Bandit', 'CodeQL']
-    header = ['CWEID', 'SampleID', 'Modified'] + methods + ['Manual']
+    # header = ['CWEID', 'SampleID', 'Modified'] + methods + ['Manual']
+    header = ['CWEID', 'SampleID'] + methods + ['Manual']  # Remove modified field
     output_filename = f'testcases_{generate_method}.csv'
     rows = []
 
-    with open(input_path / 'testcases.json', 'r') as f:
-        directories = json.load(f)[0]['contents']
+    with open(input_path / 'testcases.json') as fp:
+        directories = json.load(fp)[0]['contents']
+
+    with open(get_project_root() / 'scripts' / 'manual_results.json') as fp:
+        manual_results = json.load(fp)
+
+    mapping = {
+       "code_assistant": "CA Result",
+       "secure_code_assistant": "SCA Result",
+       "prompt_chaining": "PC Result" 
+    }
 
     for directory in directories:
         cwe_num = directory['name']
@@ -105,7 +121,8 @@ def summarize_results(output_path: Path, generate_method: str, input_path: Path)
             filename = file['name']
 
             method_results = results.get(cwe_num, {}).get(filename, {})
-            row = [cwe_num, filename, '_']
+            # row = [cwe_num, filename, '_'] # remove modified field
+            row = [cwe_num, filename]
             for method in methods:
                 method = method.lower()
                 if method in method_results and int(cwe_num.split('-')[1]) in method_results[method]:
@@ -115,7 +132,13 @@ def summarize_results(output_path: Path, generate_method: str, input_path: Path)
                 
                 row.append(cell)
             
-            row.append(0) # Manual method
+            try:
+                manual_result = manual_results[cwe_num][filename][mapping[generate_method]] 
+                row.append(1 if manual_result == 'Secure' else 0) # Manual method
+            except KeyError as e:
+                print(f'Manual Result not found {(cwe_num, filename, generate_method, mapping[generate_method])}')
+                raise e
+            
             rows.append(row)
                                    
     with open(output_path / output_filename, 'w', encoding='UTF8', newline='') as f:
@@ -178,7 +201,7 @@ def main():
 
         input_data = []
         for cwe in args.directory.iterdir():
-            if len(cwe_list) and cwe.name not in cwe_list:
+            if (len(cwe_list) and cwe.name not in cwe_list) or cwe.name.startswith('.'):
                 continue
 
             for file in cwe.iterdir():
@@ -191,12 +214,23 @@ def main():
                 output_generate_results(output_path=args.output, test_name=args.method, results=results)
         
         elif args.command == 'evaluate':
+            filename = Path(str(args.directory.name).lower() + f'_{args.method.lower()}.json')
+            
+            results = []
+            results_set = set()
+            if (args.output / filename).exists():
+                with open(args.output / filename) as fp:
+                    results = json.loads(fp.read())
+                    results_set = set([(l['CWE'], l['filename']) for l in results])
+            
+            input_data = [inn for inn in input_data if (inn['CWE'], inn['filename']) not in results_set]
+
             results_generator = evaluate_methods[args.method](input_data)
-            if args.output:
-                filename = Path(str(args.directory.name).lower() + f'_{args.method.lower()}.json')
-                results = []
-                for result in results_generator:
-                    results.append(result)
+            
+            for result in results_generator:
+                results.append(result)
+
+                if args.output:
                     with open(args.output / filename, 'w') as fp:
                         fp.write(json.dumps(results))
 
