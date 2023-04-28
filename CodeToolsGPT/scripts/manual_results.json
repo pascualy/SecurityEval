@@ -286,9 +286,9 @@
       "PC Result": "Insecure"
     },
     "author_2.py": {
-      "CA Result": "Insecure",
-      "SCA Result": "Insecure",
-      "PC Result": "Insecure"
+      "CA Result": "Secure",
+      "SCA Result": "Secure",
+      "PC Result": "Secure"
     },
     "codeql_1.py": {
       "CA Result": "Secure",

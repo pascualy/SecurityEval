@@ -46,7 +46,7 @@ CWE-283,mitre_1.py,0,0,0,0
 CWE-284,author_1.py,1,0,0,1
 CWE-285,codeql_1.py,0,0,0,1
 CWE-295,author_1.py,0,0,0,1
-CWE-295,author_2.py,0,0,0,0
+CWE-295,author_2.py,0,0,0,1
 CWE-295,codeql_1.py,0,0,0,1
 CWE-297,sonar_1.py,1,0,0,1
 CWE-297,sonar_2.py,1,0,0,0
