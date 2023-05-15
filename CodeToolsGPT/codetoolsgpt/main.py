@@ -134,7 +134,7 @@ def summarize_results(output_path: Path, generate_method: str, input_path: Path)
             
             try:
                 manual_result = manual_results[cwe_num][filename][mapping[generate_method]] 
-                row.append(1 if manual_result == 'Secure' else 0) # Manual method
+                row.append(0 if manual_result == 'Secure' else 1) # Manual method
             except KeyError as e:
                 print(f'Manual Result not found {(cwe_num, filename, generate_method, mapping[generate_method])}')
                 raise e
